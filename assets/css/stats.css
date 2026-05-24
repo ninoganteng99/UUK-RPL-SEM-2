@@ -1,0 +1,154 @@
+/* ===================================================
+   KUNCI LAYAR GLOBAL (Anti Geser Kanan)
+   =================================================== */
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; 
+    color: white;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(5, 8, 16, 0.6), rgba(5, 8, 16, 0.8)), 
+                url('../image/msc.webp');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    transform: scale(1.1); 
+    z-index: -1; 
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem); 
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+/* Diperkecil karena sisanya pindah ke class Bootstrap di HTML */
+.trend-title {
+    color: #55E3FF;
+    font-size: clamp(2rem, 5vw, 2.8rem); 
+}
+
+/* --- STATISTIK PAGE STYLES --- */
+.nav-pills .nav-link {
+    color: #a0aec0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #55E3FF !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(85, 227, 255, 0.4);
+}
+
+.stats-table-container {
+    background-color: #0d1b33;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(85, 227, 255, 0.05) !important;
+    transition: 0.2s;
+}
+
+/* --- LOGO TIM (Kunci Ukuran Kotak & Seragam) --- */
+.team-logo-img {
+    width: 45px !important;         /* Pas layar laptop, ukuran logo dikunci 45px */
+    height: 45px !important;        /* Tingginya juga dikunci 45px biar jadi kotak sempurna */
+    object-fit: contain !important; /* Biar gambar aslinya gak melar/gepeng di dalem kotak */
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); 
+}
+
+/* --- FORMAT ELEMEN TABEL --- */
+.table td, .table th {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+
+.table thead th {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    font-size: 15px;
+}
+
+/* Pembagian Lebar Kolom Tabel */
+.table th:nth-child(1), .table td:nth-child(1) { width: 22%; }
+.table th:nth-child(2), .table td:nth-child(2) { width: 18%; }
+.table th:nth-child(3), .table td:nth-child(3) { width: 15%; }
+.table th:nth-child(4), .table td:nth-child(4) { width: 20%; }
+.table th:nth-child(5), .table td:nth-child(5) { width: 25%; }
+
+/* Custom Scrollbar */
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #1e3a63;
+    border-radius: 10px;
+}
+
+/* ===================================================
+   --- RESPONSIVE LAYOUT (Kondisi Pas Layar Dibelah / HP) --- 
+   =================================================== */
+@media (max-width: 768px) {
+    .team-logo-img {
+        width: 35px !important;   /* Pas layar dibelah/kecil, otomatis menciut ke 35px biar muat */
+        height: 35px !important;  
+    }
+    
+    .table tbody td { 
+        font-size: 13px; 
+    }
+    
+    .nav-pills .nav-link { 
+        padding: 8px 14px; 
+        font-size: 12px; 
+    }
+    
+    .hero-section { 
+        height: auto; 
+        padding: 120px 0 80px; 
+    }
+    
+    .hero-title { 
+        font-size: 2.5rem; 
+    }
+}

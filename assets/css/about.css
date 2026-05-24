@@ -1,0 +1,161 @@
+/* ===================================================
+   1. GLOBAL & ABOUT SECTION CONFIG
+   =================================================== */
+.about-section {
+    padding: 160px 0 100px; /* Jarak aman agar tidak tertutup navbar fixed-top */
+}
+
+.about-title {
+    font-size: clamp(2.5rem, 6vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.small-desc {
+    font-size: 1.05rem;
+    color: #cbd5e1 !important;
+}
+
+.section-subtitle {
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Dekorasi Box Gambar Kanan */
+.about-gfx-box img {
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+
+/* ===================================================
+   2. BOX VISI MISI, KONTEN FANPAGE & COUNTER
+   =================================================== */
+/* Kotak Angka Statistik */
+.counter-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.counter-card h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* Kotak Fitur Layanan Fanpage */
+.feature-fanpage-box {
+    background: #0d1b33;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-fanpage-box:hover {
+    transform: translateY(-5px);
+    border-color: #55E3FF;
+}
+
+
+/* Kotak Tujuan (Visi Misi) */
+.vision-mission-box {
+    background-color: #0d1b33;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: border-color 0.3s ease;
+}
+
+.vision-mission-box:hover {
+    border-color: rgba(85, 227, 255, 0.3);
+}
+
+.text-success {
+    color: #2ecc71 !important;
+}
+
+
+/* ===================================================
+   3. PROFILE CARD HORIZONTAL (KREATOR)
+   =================================================== */
+.profile-card-horizontal {
+    background-color: #0d1b33;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden; /* Memastikan sudut gambar ikut melengkung */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-card-horizontal:hover {
+    transform: translateY(-5px);
+    border-color: #55E3FF;
+}
+
+
+/* Kontainer Foto Sebelah Kiri */
+.avatar-box-horizontal {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.profile-img-horizontal {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 20px; /* Hanya sudut kiri bawah yang melengkung */
+}
+
+/* Area Teks Sebelah Kanan */
+.profile-content-horizontal {
+    padding: 40px;
+}
+
+.small-desc-profile {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+
+
+/* ===================================================
+   4. RESPONSIVE SETTINGS (KHUSUS SMARTPHONE / HP)
+   =================================================== */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 120px 0 60px;
+        text-align: center; /* Konten otomatis ke tengah saat di HP */
+    }
+
+    .about-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .small-desc {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    .avatar-box-horizontal {
+        height: 200px; /* Tinggi foto disesuaikan di layar HP */
+    }
+    
+    .profile-content-horizontal {
+        padding: 30px 20px;
+        text-align: center; /* Teks profil otomatis ke tengah saat di HP */
+    }
+
+    .profile-socials {
+        justify-content: center; /* Tombol sosmed otomatis ke tengah saat di HP */
+    }
+}
